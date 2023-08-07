@@ -16,10 +16,11 @@ variable "resource_group_name" {
 variable "routes" {
   description = "(Optional) A list of all the routes"
   type = list(object({
-    name                   = string
-    address_prefix         = string
-    next_hop_type          = string
-    next_hop_in_ip_address = optional(string, null)
+    name           = string
+    address_prefix = string
+    next_hop_type  = string
+    #TODO run
+    next_hop_in_ip_address = optional(string)
   }))
   default = []
 }
